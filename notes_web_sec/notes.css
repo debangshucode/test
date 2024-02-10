@@ -1,0 +1,276 @@
+@import url('https://cdn.jsdelivr.net/npm/fontsource-gilroy@latest');
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+body {
+    font-family: 'Gilroy', sans-serif;
+    background-color: #fefeff;
+    overflow-y: auto;
+}
+/* .......................Navbar.................... */
+
+.nav_bar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 9999999;
+    background-color: #fefeff;
+    border-bottom: 0.8px solid #e5e7eb;
+    border-radius: 5px;
+}
+
+
+
+
+/* this is list item in navbar */
+
+.lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap : 10.5px
+}
+.lists span{
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#active_page {
+    background-color: #cccaddad;
+}
+
+.lists span:hover{
+    background-color: #F1EFFF;
+}
+.lists span a{
+    text-decoration: none;
+    color: #1B2124;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+
+/* this is logo */
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.logo h1 {
+    color: #1B2124;
+}
+
+
+/* this is login button */
+.login {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: #5a4adb;
+    border: none;
+    cursor: pointer;
+}
+.login button a{
+    text-decoration: none;
+    color: #fefeff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+/* ------this is search filter section----- */
+
+.search_filter{
+    display: flex;
+    width: 100%;
+    background-color: #fefeff;
+    margin-top: 80px;
+    justify-content: center;
+    border-bottom: 0.8px solid #e5e7eb;
+}
+.search_filter select {
+    background-color: #5a4adb;
+    width:200px;
+    color: #fefeff;
+    padding: 12px 24px;
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.search_filter button {
+    background-color: #5a4adb;
+    width:200px;
+    color: #fefeff;
+    padding: 12px 24px;
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ----------Notes here----------- */
+
+.main_notes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_notes .show{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.all_notes{
+    height: 100%;
+    width: 50%;
+}
+.all_notes a{
+    background-color: #5a4adb;
+    color: #fefeff;
+    padding: 12px 24px;
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main_notes .show button{
+    background-color: #5a4adb;
+    width:200px;
+    color: #fefeff;
+    padding: 12px 24px;
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* css for small screens */
+.nav_bar .fas{
+    display:none;
+}
+
+@media only screen and (max-width:600px){
+    .logo{
+        font-size: 25px;
+    }
+
+    /* log in / out / register */
+    .login button {
+        padding: 10px 22px;
+        border-radius: 6px;
+    }
+    .login button a{
+        font-size: 16px;
+    }
+
+    /* menu bar */
+    .nav_bar .fas{
+        display:block;
+        font-size: 25px;
+        color: #5a4adb
+    }
+    .nav_bar .lists{
+        background: #5a4adb;
+        position: fixed;
+        top:0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+    .nav_bar .lists span{
+        display: block;
+        margin: 10px;
+        height: auto;
+    }
+    .nav_bar .lists span a{
+        color: #F1EFFF;
+    }
+    .nav_bar .lists .fas{
+        color: #fefeff;
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    #active_page {
+        background-color: #5a4adb;
+        border-bottom: 2px solid white;
+    }
+
+
+    .search_filter select {
+        width:100px;
+        padding: 10px 2px;
+        font-size: 12px;
+    }
+    .all_notes a{
+        
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .all_notes{
+        width: 80%;
+    }
+    .search_filter button {
+        width:100px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .main_notes .show button{
+        width:100px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    
+    
+}

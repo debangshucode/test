@@ -1,0 +1,442 @@
+@import url('https://cdn.jsdelivr.net/npm/fontsource-gilroy@latest');
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Gilroy', sans-serif;
+    background-color: #fefeff;
+}
+
+
+/* .......................Navbar.................... */
+
+.nav_bar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 9999999;
+    background-color: #fefeff;
+    border-bottom: 0.8px solid #e5e7eb;
+    border-radius: 5px;
+}
+
+
+
+
+/* this is list item in navbar */
+
+.lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap : 10.5px
+}
+.lists span{
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.lists span:hover{
+    background-color: #F1EFFF;
+}
+.lists span a{
+    text-decoration: none;
+    color: #1B2124;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+
+/* this is logo */
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.logo h1 {
+    color: #1B2124;
+}
+
+
+/* this is login button */
+.login {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: #5a4adb;
+    border: none;
+    cursor: pointer;
+}
+.login button a{
+    text-decoration: none;
+    color: #fefeff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* this is hero section */
+
+.hero {
+    width: 100%;
+    margin-top: 80px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+
+/* ..........this is for the left side text of hero section........... */
+
+.hero .hero_text{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 35px;
+    height: 100%;
+}
+.text {
+    width: 100%;
+    height: 50%;
+}
+.about_logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 20%;
+}
+.hero h1 {
+    color: #1B2124;
+    font-size: 40px;
+}
+.hero span {
+    color: #5a4adb;
+}
+
+
+/* ..........this is for right side of the herosection (image).......... */
+
+.hero_right{
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.hero_right img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* ........this is main section.......... */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 2.8px 0 2.8px;
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+/* ....this is the text part in main..... */
+
+.main_heading {
+    margin: 8px 0;
+    font-size: 32px;
+    color: #1B2124;
+}
+.main_text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #3d3d3d;
+    font-weight: 500;
+}
+
+/* ....this is the cards part of main... */
+.main_container {
+    margin: 32px 0;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.main_cards {
+    border: 0.8px solid #e5e7eb;
+    border-radius: 5px;
+    height: 200px;
+    padding: 24px;
+    background-image: url('/newnotes/images/cardback3.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.main_cards:hover .card_icon{
+    transform: translateY(-10px);
+}
+.card_head{
+    font-size: 25px;
+    font-weight: 700;
+    width: 100%;
+}.card_text{
+    padding-top: 12px;
+    width: 100%;
+    font-size: 18px;
+    color: #3d3d3d
+}
+.card_text a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #5a4adb;
+    font-size: 16px;
+    font-weight: 600;
+}
+.card_icon{
+    height: 46px;
+    width: 46px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.card_icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ..thsi is footer..  */
+
+.footer{
+    border-top: 0.8px solid #e5e7eb;
+    display: flex;
+    padding: 32px 0;
+    margin: 60px 8px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* this is left part of footer (main text) */
+.footer_left{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer_logo{
+    display: flex;
+    width: 90%;
+    cursor: pointer;
+    color: #1B2124;
+}
+.footer_text{
+    display: flex;
+    padding-top: 12px;
+    font-size: 14px;
+    width: 90%;
+    color: #3d3d3d;
+    font-weight: 400;
+}
+
+/* this is right part of footer (credits) */
+.footer_right{
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+.attributes{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.attributes a{
+    text-decoration: none;
+    color: #3d3d3d;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* ...responsive small screens.... */
+
+/* this is menu bar disible for big screens */
+.nav_bar .fas{
+    display:none;
+}
+
+@media only screen and (max-width:600px){
+    .logo{
+        font-size: 25px;
+    }
+
+    /* log in / out / register */
+    .login button {
+        padding: 10px 22px;
+        border-radius: 6px;
+    }
+    .login button a{
+        font-size: 16px;
+    }
+
+    /* menu bar */
+    .nav_bar .fas{
+        display:block;
+        font-size: 25px;
+        color: #5a4adb
+    }
+    .nav_bar .lists{
+        background: #5a4adb;
+        position: fixed;
+        top:0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+    .nav_bar .lists span{
+        display: block;
+        margin: 10px;
+        height: auto;
+    }
+    .nav_bar .lists span a{
+        color: #F1EFFF;
+    }
+    .nav_bar .lists .fas{
+        color: #fefeff;
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* hero section */
+
+    .hero{
+        height: 200px;
+    }
+    /* hero left side */
+    .hero .hero_text{
+        margin-left: 25px;
+    }
+    .hero h1 {
+        font-size: 20px;
+    }
+    /* hero right side */
+    .hero_right img{
+        height: 70%;
+        object-fit: cover;
+    }
+
+    /* main sec */
+
+    .main_heading h2 {
+        font-size: 22px;
+    }
+    .main_text{
+        font-size: 16px;
+        text-align: center;
+    }
+    .main_container {
+        width: 70%;
+        display: block;
+    }
+    .main_cards {
+        margin: 15px 0;
+        height: 150px;
+        padding: 20px;
+    }
+    .card_head{
+        font-size: 22px;
+    }.card_text{
+        font-size: 16px;
+    }
+    .card_text a{
+        font-size: 14px;
+    }
+
+    /* this is footer  */
+    .footer{
+        flex-direction: column;
+        margin: 50px 0;
+        height: 600px;
+        justify-content: flex-start;
+    }
+    /* this is footer left */
+    .footer_left{
+        width: 90%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer_text{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .footer_logo{
+        justify-content: center;
+    }
+    
+    /* this is right part of footer (credits) */
+    .footer_right{
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+    .attributes{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+    .attributes a{
+        color: #3d3d3d;
+        font-size: 14px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+}

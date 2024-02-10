@@ -1,0 +1,113 @@
+@import url('https://cdn.jsdelivr.net/npm/fontsource-gilroy@latest');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    background-image: url('/newnotes/images/log_back.jpg');
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+.button_box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    background-color:#fed989 ;
+}
+.button_box button {
+
+    font-weight: 500;
+    font-size: 14px;
+}
+.toggle_btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background-color: #5a4adb;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.input_grp {
+    top : 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+.input_field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit_btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: #5a4adb;
+    border: 0;
+    color: #fefeff;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.checkbox {
+    margin: 30px 10px 30px 0;
+}
+span {
+    color: #777;
+    font-size: 12px ;
+    bottom: 68px;
+    position: absolute;
+}
+#login {
+    left: 50px;
+}
+#register {
+    left: 450px;
+}
+@media only screen and (max-width: 600px) {
+    .form_box {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    #register {
+        left: 50px;
+    }
+}

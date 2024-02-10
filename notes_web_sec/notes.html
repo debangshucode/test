@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="notes.css">
+    <title>Document</title>
+</head>
+<body>
+     <!-- .................NavBar..................... -->
+
+     <nav>
+        <div class="nav_bar">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="lists" id="sidemenu">
+                <span id="active_page"><a href="notes.html">Notes</a></span>
+                <span><a href="#">Assignments</a></span>
+                <span><a href="#">PPT</a></span>
+                <span><a href="#">Contact Us</a></span>
+                <i class="fas fa-xmark" onclick="closemenu()"></i>
+            </div>
+            <div class="login"><button><a href="login.html">Log Out</a></button></div>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </div>
+    </nav>
+    
+
+    <!-- ....body........ -->
+    <div class="search_filter">
+         <!--  semester filter -->
+         <select id="semesterFilter">
+            <option value="none">Semester</option>
+            <option value="semester1">Semester 1</option>
+            <option value="semester2">Semester 2</option>
+        </select>
+        
+        <!--  subject filter -->
+        <select id="subjectFilter">
+            <option value="none">Subject</option>
+            <option value="arc">Arc</option>
+            <option value="adld">ADLD</option>
+            <option value="dsa">DSA</option>
+            <option value="python">Python</option>
+            <option value="math">Math</option>
+        </select>
+        <button>
+            submit
+        </button>
+    </div>
+    <div class="main_notes">
+        <div class="all_notes">
+            <a href="notespdf/arc/PCC-CSM 301_Notes 3.pdf" download class="sub_notes" data-semester="semester1" id="arc">Arc Notes 1</a>
+            <a href="notespdf/arc/PCC-CSM 301_Notes1.pdf" download class="sub_notes" data-semester="semester2" id="arc">Arc Notes 2</a>
+            <a href="notespdf/digilogic/Module_1.pdf" download class="sub_notes" data-semester="semester1" id="adld">ADLD Notes 1</a>
+            <a href="notespdf/digilogic/Module_2.pdf" download class="sub_notes" data-semester="semester2" id="adld">ADLD Notes 2</a>
+            <a href="notespdf/dsa/Binary_Trees.pdf" download class="sub_notes"  data-semester="semester1" id="dsa">DSA 1</a>
+            <a href="notespdf/dsa/Graphs.pdf" download class="sub_notes" data-semester="semester2" id="dsa">DSA 2</a>
+            <a href="notespdf/python/Module-1 Note-1 ESCM303-Introduction to Python Programming (1).docx" download class="sub_notes" data-semester="semester1" id="python">Python 1</a>
+            <a href="notespdf/python/Module-1 Note-2 ESCM303-Introduction to Python Programming (1).docx" download class="sub_notes" data-semester="semester2" id="python">Python 2</a>
+            <a href="notespdf/math/BSCM301_BSCD301_Module 1_Solution.pdf" download class="sub_notes" data-semester="semester1" id="math">Math 1</a>
+            <a href="notespdf/math/BSCM301_BSCD301_Module 2_Solution.pdf" download class="sub_notes" data-semester="semester2" id="math">Math 2</a>
+            <a href="notespdf/arc/PCC-CSM 301_Notes 3.pdf" download class="sub_notes" data-semester="semester1" id="arc">Arc Notes 1</a>
+            <a href="notespdf/arc/PCC-CSM 301_Notes1.pdf" download class="sub_notes" data-semester="semester2" id="arc">Arc Notes 2</a>
+            <a href="notespdf/digilogic/Module_1.pdf" download class="sub_notes" data-semester="semester1" id="adld">ADLD Notes 1</a>
+            <a href="notespdf/digilogic/Module_2.pdf" download class="sub_notes" data-semester="semester2" id="adld">ADLD Notes 2</a>
+            <a href="notespdf/dsa/Binary_Trees.pdf" download class="sub_notes"  data-semester="semester1" id="dsa">DSA 1</a>
+            <a href="notespdf/dsa/Graphs.pdf" download class="sub_notes" data-semester="semester2" id="dsa">DSA 2</a>
+            <a href="notespdf/python/Module-1 Note-1 ESCM303-Introduction to Python Programming (1).docx" download class="sub_notes" data-semester="semester1" id="python">Python 1</a>
+            <a href="notespdf/python/Module-1 Note-2 ESCM303-Introduction to Python Programming (1).docx" download class="sub_notes" data-semester="semester2" id="python">Python 2</a>
+            <a href="notespdf/math/BSCM301_BSCD301_Module 1_Solution.pdf" download class="sub_notes" data-semester="semester1" id="math">Math 1</a>
+            <a href="notespdf/math/BSCM301_BSCD301_Module 2_Solution.pdf" download class="sub_notes" data-semester="semester2" id="math">Math 2</a>
+        </div>
+        
+        <div class="show">
+            <button onclick="showMoreNotes()">
+                Show More
+            </button>
+            <button onclick="showLessNotes()">
+                Show Less
+            </button>
+        </div>
+        
+    </div>
+    
+
+
+    
+    
+
+    <script src="notes.js"></script>
+</body>
+</html>
